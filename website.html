@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vue 3</title>
+    <title>Vue 3 practice</title>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    
-
-    <body>
 
 
-        <section class="mt-8">
-            <ul>
-                <li v-for="colourx in colour">
-                    {{colourx.colours}}
-                </li>
-            </ul>
-            </section>
+    </head>
+
+    <body class="h-full grid place-items-center">
+        <div id="app">
+
+            <section class="mt-8"> 
+
+                <ul>
+                    <li v-for="colourx in colour.filter(a => ! a.turn)">
+                        <label>
+                            {{colourx.name}}
+                            <input type="checkbox" v-model="colourx.turn">
+                        </label>
+                    </li>
+                    
+                    
+                </ul>
 
 
         <script>
@@ -26,18 +33,17 @@
                 data() {
                     return {
                         colour: [
-                            {colours: 'green'},
-                            {colors: 'red'},
+                            { name: 'green',turn: false, id: 1},
+                            {name: 'amber', turn: true, id: 2},
+                            {name: 'red', turn:true, id: 3}
                         ]
                     }
                 }
             };
+
             Vue.createApp(app).mount('#app');
         </script>
 
     </body>
 
-
-    </head>
-
-    
+</html>
