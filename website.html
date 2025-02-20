@@ -7,62 +7,30 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style> 
-    </style>
-
 
     </head>
 
     <body class="h-full grid place-items-center">
-        <div id="app">
+        <div id="app"> 
+            <app-button></app-button>
 
-            <section class="mt-8"> 
-                <h2 class="font-bold mb-2"> In progress assignments</h2>
-
-                <ul>
-                    <li v-for="assignment in assignments.filter(a=> ! a.complete)" :key="assignment.id">
-                        <label>
-                            {{assignment.name}}
-                            <input type="checkbox" v-model="assignment.complete">
-                        </label>
-                    </li>
-                    
-                </ul>
-
-            </section>
-
-            <section v-show="assignments.filter(a=>a.complete).length" class="mt-8"> 
-                <h2 class="font-bold mb-2"> completed assignments</h2>
-
-                <ul>
-                    <li v-for="assignment in assignments.filter(a => a.complete)" :key="assignment.id">
-                        <label>
-                            {{assignment.name}}
-                            <input type="checkbox" v-model="assignment.complete">
-                        </label>
-                    </li>
-                    
-                </ul>
-
-            </section>
         </div>
 
         <script>
             let app = {
-                data() {
-                    return {
-                        assignments: [
-                            { name: 'Finish project',complete: false, id: 1},
-                            { name: 'Read chapter 4', complete: false, id: 2},
-                            { name: 'read chapter 5', complete: false, id: 3}
-                        ]
-                    }
+                components: {
+                    'app-button': {
+                        mounted() {
+                            alert('hello');
+                        }
+                    },
                 }
             };
 
-            Vue.createApp(app).mount('#app');
+            vue.createApp(app).mount('#app');
         </script>
 
+            
     </body>
 
 </html>
