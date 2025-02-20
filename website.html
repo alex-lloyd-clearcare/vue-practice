@@ -1,36 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang = "en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="https://unpkg.com/vue@3"></script>
-    <style> 
+    <title> Basic events </title>
+    <script> src="https://unpkg.com/vue@3" </script>
+    
+    <style>
         html, body {
-            height: 100%;
+            height: 100%
         }
-
         body {
             display: grid;
-            place-items: top;
+            place-items: center;
+        }
+
+        .text-red {
+            color: red;
+        }
+        .text-green {
+            color: green;
         }
     </style>
 </head>
-<body>
 
+<body> 
     <div id="app">
-        <button> Click Me </button>
+        <button class="text-green"> Click me</button>
     </div>
 
-
     <script>
-
+        Vue.createApp({
+        }).mount('#app');
+        
     </script>
-
-
 </body>
-
-
-
-
 
 </html>
