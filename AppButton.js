@@ -7,11 +7,7 @@ export default {
 
     data() {
         return {
-            processing: false
+            processing: true
         };
     }
 }
-
-import Appp from '/Users/alexlloyd/vue-practice-1/v-for1.html'
-
-app = createApp(Appp)
