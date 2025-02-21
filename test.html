@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html land="en"> 
+    <head>
+        <script src="https://unpkg.com/vue@3"></script>
+
+
+        <style>
+            div {
+                .pinkBG {
+                    background-color: lightpink;
+                }
+            }
+        </style>
+    </head>
+
+
+    <body>
+    <div id="app">
+        <label v-bind:class="messsage">
+            hygtfd
+        </label>
+    </div>
+    <script>
+            Vue.createApp({
+                data() {
+                    return {
+                        message:"pinkBG"
+                    }
+                }
+            }).mount('#app');
+        </script>
+    </body>
+</html>

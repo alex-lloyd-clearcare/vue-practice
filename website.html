@@ -10,27 +10,24 @@
 
     </head>
 
-    <body class="h-full grid place-items-center">
+    <body class ="h-full grid place items-center">
         <div id="app"> 
-            <app-button></app-button>
-
+            <app-button>heklo</app-button>
         </div>
 
         <script>
             let app = {
                 components: {
-                    'app-button': {
-                        mounted() {
-                            alert('hello');
+                    'app-button': {mounted() 
+                        {alert('hello');
                         }
-                    },
+                    }, //when its mounted on the page, alert'hello' 
                 }
             };
 
-            vue.createApp(app).mount('#app');
+            Vue.createApp({}).mount('#app');
         </script>
 
-            
     </body>
 
 </html>
