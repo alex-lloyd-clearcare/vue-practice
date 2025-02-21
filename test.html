@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        .pinkBG {
+        background-color: lightpink; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <label v-bind:style="{fontSize: size}" v-bind:class="bgcolor">hbv</label>
+    </div>
+
+    <script>
+        Vue.createApp({
+        data() {
+            return {
+            bgcolor: "pinkBG",
+            size: "28px"
+            }
+        }
+        }).mount('#app')
+    </script>
+</body>
+</html>
